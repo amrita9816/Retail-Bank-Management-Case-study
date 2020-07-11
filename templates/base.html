@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+<head>
+	
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <style>
+		body{
+			margin-left: 0px;
+
+		}
+    </style>
+    <style>
+        form{
+            margin-left: 500px;
+        }
+    </style>
+    <style>
+        #outer-div {
+          width: 50%;
+          text-align: center;
+          
+        }
+        #inner-div {
+          display: inline-block;
+          margin: 0 auto;
+          padding: 3px;
+          
+        }
+      </style>
+      <style>
+        .dropbtn {
+          background-color: #4CAF50;
+
+          color: white;
+          padding: 16px;
+          font-size: 16px;
+          border: none;
+          cursor: pointer;
+        }
+        
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+        
+        .dropdown-content a:hover {background-color: #f1f1f1}
+        
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+        
+        .dropdown:hover .dropbtn {
+          background-color: #3e8e41;
+        }
+        </style>
+  </head>      
+    <body class="jumbotron">
+      <h1 style="font-size:40px;background-color: rgb(25, 184, 11);color: #000;text-align:center;">BANK</h1>
+    <hr style="width:100%;text-align:left;margin-left:0;">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+              <a class="navbar-brand" href='/Home'>Home</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <li class="nav-item dropdown">
+                <div class="dropdown">
+                    <button class="dropbtn">About_Us</button>
+                    <div class="dropdown-content">
+                    <a href="#">About Us </a>
+                   
+                    </div>
+                  </div>
+              </li>
+          
+                  <li class="nav-item dropdown">
+                    <div class="dropdown">
+                        <button class="dropbtn">Customer_Management</button>
+                        <div class="dropdown-content">
+                        <a href="/create_customer">Create Customer </a>
+                        <a href="/customer_search">Update Customer</a>
+                        <a href="/delete_customer">Delete Customer</a>
+                        </div>
+                      </div>
+                  </li><li class="nav-item dropdown">
+                    <div class="dropdown">
+                        <button class="dropbtn">Account_Management</button>
+                        <div class="dropdown-content">
+                        <a href="/create_account">Create Account</a>
+                        <a href="/delete_account">Delete Account</a>
+                        
+                        </div>
+                      </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <div class="dropdown">
+                        <button class="dropbtn">Status_Details</button>
+                        <div class="dropdown-content">
+                        <a href="#">Customer Status</a>
+                        <a href="#">Account Status</a>
+                        
+                        </div>
+                      </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <div class="dropdown">
+                        <button class="dropbtn">Account_Operations</button>
+                        <div class="dropdown-content">
+                        <a href="/account_search2">Deposit Money</a>
+                        <a href="/account_search">Withdraw Money</a>
+                        <a href="/transfer">Transfer Money</a>
+                        
+                        </div>
+                      </div>
+                  </li>
+                </ul>
+                
+                  <a class="navbar-brand" href='/login'>Logout</a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+              </div>
+            </div>
+          </nav>
+        <br>
+        
+
+        {% block body %}{% endblock %}
+        <br>
+        <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">About us</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                  </li>
+                <li class="nav-item dropup">
+                  <a class="nav-link dropdown-toggle" href="#" id="dropdown10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropup</a>
+                  <div class="dropdown-menu" aria-labelledby="dropdown10">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+    </body>
+
+</html>    

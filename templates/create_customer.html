@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+    {% block body %}
+    <h1 style="text-align:center">CREATE CUSTOMER</h1> 
+    <br>
+    <form class="pure-form pure-form-aligned" class="pure-form pure-form-stacked" action='/customer_creation' method='POST'>
+        <fieldset>
+            <div class="pure-control-group">
+                <label for="aligned-id">SSN ID</label>
+                <input type="number" id="aligned-id" placeholder="SSN ID" name='SSN ID' id='SSN ID' />
+                <span class="pure-form-message-inline">This is a required field.</span>
+            </div>
+            <div class="pure-control-group">
+                <label for="aligned-name">NAME</label>
+                <input type="text" id="aligned-name" placeholder="Name" name='name' id='name'/>
+                <span class="pure-form-message-inline">This is a required field.</span>
+            </div>
+            <div class="pure-control-group">
+                <label for="aligned-age">AGE</label>
+                <input type="number" id="aligned-age" placeholder="Age" name='age' id='age' />
+                <span class="pure-form-message-inline">This is a required field.</span>
+            </div>
+            <div class="pure-control-group">
+                <label for="aligned-add">ADDRESS LINE 1</label>
+                <input type="text" id="aligned-add" placeholder="Address" name='address1' id='address1' />
+                <span class="pure-form-message-inline">This is a required field.</span>
+            </div>
+            <div class="pure-control-group">
+                <label for="aligned-foo">ADDRESS LINE 2</label>
+                <input type="text" id="aligned-foo" placeholder="Address" name='address2' id='address2'/>
+                
+            </div>
+            <div id="outer-div">
+                <label for="aligned-state">CITY</label>
+                <input type="text" id="aligned-state" placeholder="CITY" name='city' id='city' />
+                <label for="aligned-state">State</label>
+                <select id="aligned-state" name='state' id='state'>
+                    <option>AL</option>
+                    <option>CA</option>
+                    <option>IL</option>
+                    </select>
+            
+            </div>
+            <div class="pure-controls">
+                
+                <button for="aligned-btn" type="submit" class="pure-button pure-button-primary">Submit</button>
+                <a href="/create_customer"><button id="aligned-btn" type="submit" class="pure-button pure-button-primary">Reset</button></a>
+            </div>
+        </fieldset>
+    </form>
+  {% endblock %}  

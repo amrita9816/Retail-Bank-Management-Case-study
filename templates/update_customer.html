@@ -1,0 +1,62 @@
+
+    {% extends "base.html" %}
+
+
+{% block body %}
+    <h1 style="text-align:center">UPDATE CUSTOMER</h1> 
+    <br>
+    
+    <form class="pure-form pure-form-aligned" class="pure-form pure-form-stacked" action='/customer_updation' method='POST'>
+        {%for val in value%}
+        <fieldset>
+            <div class="pure-control-group">
+                <label for="aligned-id">SSN ID</label>
+                <input type="number" id="aligned-id"  name='SSN ID' id='SSN ID' value={{val[0]}} readonly/>
+                
+            </div>
+            <div class="pure-control-group">
+                <label for="aligned-id">Customer Id</label>
+                <input type="number" id="aligned-id"  name='cust_id' id='cust_id' value={{val[1]}} readonly/>
+                
+            </div>
+            <div class="pure-control-group">
+                <label for="aligned-name">Old Name</label>
+                <input type="text" id="aligned-name"  name='oname' id='oname' value={{val[2]}} readonly/>
+                
+            </div>
+            <div class="pure-control-group">
+                <label for="aligned-name">New Name</label>
+                <input type="text" id="aligned-name"  name='nname' id='nname'/>
+                <span class="pure-form-message-inline">This is a required field.</span>
+            </div>
+            <div class="pure-control-group">
+                <label for="aligned-age">Old Age</label>
+                <input type="number" id="aligned-age"  name='age' id='age' value={{val[3]}} readonly/>
+                <span class="pure-form-message-inline">This is a required field.</span>
+            </div>
+            <div class="pure-control-group">
+                <label for="aligned-age">New Age</label>
+                <input type="number" id="aligned-age" placeholder="new Age" name='nage' id='nage' />
+                <span class="pure-form-message-inline">This is a required field.</span>
+            </div>
+            <div class="pure-control-group">
+                <label for="aligned-add">Old ADDRESS</label>
+                <input type="text" id="aligned-add"  name='address1' id='address1' value={{val[4]}} readonly/>
+                
+            </div>
+            <div class="pure-control-group">
+                <label for="aligned-add">New ADDRESS</label>
+                <input type="text" id="aligned-add" placeholder="Address" name='new_address' id='new_address' />
+                <span class="pure-form-message-inline">This is a required field.</span>
+            </div>
+            
+            <div class="pure-controls">
+                
+                <button for="aligned-btn" type="submit" class="pure-button pure-button-primary">Update</button>
+                
+            </div>
+        </fieldset>
+        {%  endfor  %}
+    </form>
+    {% endblock %}  
+    

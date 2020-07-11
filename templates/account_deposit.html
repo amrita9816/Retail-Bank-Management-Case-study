@@ -1,0 +1,45 @@
+
+    {% extends "base.html" %}
+    {% block body %}
+    <h1 style="text-align:center">DEPOSIT ACCOUNT</h1>
+    <form class="pure-form pure-form-aligned" class="pure-form pure-form-stacked" action='/amount_deposit' method='POST'>
+        
+        <fieldset>
+          
+            <div class="pure-control-group">
+                <label for="aligned-id">Customer Id</label>
+                <input type="number" id="aligned-id"  name='cust_id' id='cust_id' value={{value[0][0]}} readonly/>
+                
+            </div>
+            <div class="pure-control-group">
+                <label for="aligned-id">Account Id</label>
+                <input type="number" id="aligned-id"  name='acct_id' id='acct_id' value={{value[0][1]}} readonly/>
+                
+            </div>
+            <div class="pure-control-group">
+                <label for="aligned-name">Account Type</label>
+                <input type="text" id="aligned-name"  name='acc type' id='acc type' value={{value[0][2]}} readonly/>
+                
+            </div>
+            <div class="pure-control-group">
+                <label for="aligned-name">Balance</label>
+                <input type="number" id="aligned-name"  name='balance' id='balance' value={{value[0][3]}} readonly/>
+                
+            </div>
+            <div class="pure-control-group">
+                <label for="aligned-age">Deposit Amount</label>
+                <input type="number" id="aligned-age"  name='amt' id='amt' placeholder="Enter amount"/>
+                <span class="pure-form-message-inline">This is a required field.</span>
+            </div>
+            
+            <div class="pure-controls">
+                
+                <button for="aligned-btn" type="submit" class="pure-button pure-button-primary">Submit</button>
+                
+            </div>
+                
+        </fieldset>
+        
+    </form>
+    {% endblock %}
+    
